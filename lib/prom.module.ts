@@ -16,6 +16,7 @@ export class PromModule {
     const {
       withDefaultController,
       useHttpCounterMiddleware,
+      collectGCMetrics,
       ...promOptions
     } = options;
 
@@ -30,6 +31,12 @@ export class PromModule {
         PromService,
       ],
     };
+
+    if (collectGCMetrics) {
+      const gcStats = require('prometheus-gc-stats');
+      const startGcStats = gcStats(client.register);
+      startGcStats();
+    }
 
     // default push default controller
     if (withDefaultController !== false) {

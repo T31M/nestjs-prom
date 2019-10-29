@@ -31,7 +31,9 @@
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.5.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "prometheus-gc-stats": "^0.6.2"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/digikare/nestjs-prom.git"
