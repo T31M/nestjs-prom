@@ -5,7 +5,7 @@ import { Counter } from 'prom-client';
 @Injectable()
 export class InboundMiddleware implements NestMiddleware {
 
-  private readonly _counter: Counter;
+  private readonly _counter: Counter<string>;
 
   constructor(
     private readonly _service: PromService,

@@ -48,7 +48,7 @@ export const findOrCreateCounter = ({
   name,
   help,
   labelNames,
-}: IMetricArguments): client.Counter => {
+}: IMetricArguments): client.Counter<string> => {
   return findOrCreateMetric({
     name,
     help,
@@ -61,7 +61,7 @@ export const findOrCreateGauge = ({
   name,
   help,
   labelNames,
-}: IMetricArguments): client.Gauge => {
+}: IMetricArguments): client.Gauge<string> => {
   return findOrCreateMetric({
     name,
     help,
@@ -74,7 +74,7 @@ export const findOrCreateHistogram = ({
   name,
   help,
   labelNames,
-}: IMetricArguments): client.Histogram => {
+}: IMetricArguments): client.Histogram<string> => {
   return findOrCreateMetric({
     name,
     help,
@@ -87,7 +87,7 @@ export const findOrCreateSummary = ({
   name,
   help,
   labelNames,
-}: IMetricArguments): client.Summary => {
+}: IMetricArguments): client.Summary<string> => {
   return findOrCreateMetric({
     name,
     help,
