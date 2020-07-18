@@ -41,7 +41,7 @@ export class InboundMiddleware implements NestMiddleware {
       path: url,
     };
 
-    this._counter.inc(labelValues, 1, new Date());
+    this._counter.inc(labelValues, 1);
 
     next();
   }

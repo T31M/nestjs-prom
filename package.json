@@ -1,6 +1,6 @@
 {
   "name": "@digikare/nestjs-prom",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A promotheus module for nestjs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,25 +11,26 @@
     "prepublish:npm": "npm run build",
     "publish:npm": "npm publish --access public",
     "prepublish:next": "npm run build",
-    "publish:next": "npm publish --access public --tag next"
+    "publish:next": "npm publish --access public --tag next",
+    "prepare": "npm run build"
   },
   "author": "Tieu-Philippe KHIM <pkhim@digikare.com>",
   "license": "MIT",
   "devDependencies": {
-    "@nestjs/common": "^6.5.3",
-    "@nestjs/core": "^6.5.3",
-    "@types/node": "^10.14.16",
-    "prom-client": "^11.5.3",
+    "@nestjs/common": "^7.3.2",
+    "@nestjs/core": "^7.3.2",
+    "@types/node": "^14.0.23",
+    "prom-client": "^12.0.0",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^6.5.2",
-    "ts-node": "^8.3.0",
-    "typescript": "^3.5.3"
+    "rxjs": "^6.6.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
   },
   "peerDependencies": {
-    "@nestjs/common": "^6.5.3",
-    "@nestjs/core": "^6.5.3",
+    "@nestjs/common": "^7.3.2",
+    "@nestjs/core": "^7.3.2",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^6.5.2"
+    "rxjs": "^6.6.0"
   },
   "dependencies": {},
   "repository": {
@@ -46,6 +47,7 @@
   "homepage": "https://github.com/digikare/nestjs-prom#readme",
   "contributors": [
     "Michael Yankelev @FSM1",
-    "Ashleigh Simonelli @bashleigh"
+    "Ashleigh Simonelli @bashleigh",
+    "@blackkopcap"
   ]
 }
